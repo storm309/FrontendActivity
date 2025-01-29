@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #7cb4a89e;
+        }
+        .container {
+            color: #f60e0edd;
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+            padding: 10px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(214, 206, 206, 0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #3112f7ac;
+        }
+        label {
+            display: block; 
+            margin: 5px 0 5px
+        }
+        input, textarea {
+            color: rgb(237, 13, 13);
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #788d7d;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form action="/submit_contact" method="post">
+            <label for="name"> Full-Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email-Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="email">Reg-No.</label>
+            <input type="Registration" id="Registration Number" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
