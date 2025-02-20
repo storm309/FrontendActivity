@@ -1,0 +1,31 @@
+<style>
+/* Text Alignment */
+.text-left {
+text-align: left;
+}
+
+.text-right {
+text-align: right;
+}
+
+.text-justify {
+text-align: justify;
+}
+
+.text-center {
+text-align: center;
+}
+
+/* Flexbox Utilities */
+.flex {
+display: flex;
+}
+
+.justify {
+justify-content: center;
+}
+
+.items {
+align-items: center;
+}
+</style>
