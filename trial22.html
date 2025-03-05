@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        .header {
+            width: auto;
+            background-color: antiquewhite;
+            display: inline;
+        }
+
+
+        .text {
+        text-align:center;
+        color:white;
+        padding-top: 20%;
+        font-size: xx-large;
+
+        }
+
+        .links a {
+            margin-right: 15px; /* Adjust the spacing as needed */
+            display: inline-block; /* Ensures proper spacing */
+        }
+
+        .button {
+            padding-top: 2%;
+        }
+
+        button {
+        color:blue;
+        background-color:white;
+        border-radius:6px;
+        padding: 10px;
+        font-size:medium;
+        cursor: pointer;
+        }
+
+        h3 {
+        color:blue;
+        font-size: x-large;
+        }
+
+        a{
+        text-decoration:none;
+
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="header">
+            <h3> My Website </h3>
+            <div class="links">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Services</a>
+                <a href="">Contact</a>
+            </div>
+        </div>
+
+        <div class="bg-scroll bg-cover h-screen bg-gray-300">
+            <div class="text">
+                Learn CSS with tailwind <br>
+                <div class="button">
+                    <button>Get Started</button>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
