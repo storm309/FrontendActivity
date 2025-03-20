@@ -12,3 +12,4 @@ console.log(numbers.indexOf(6)); // -1
 // length
 console.log(numbers.length); // 5
 console.log(numbers.lastIndexOf(3)); // 2
+console.log(numbers.lastIndexOf(6)); // -1
