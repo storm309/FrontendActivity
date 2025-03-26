@@ -5,65 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Manipulation using JS</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-
         #message {
-            font-size: 22px;
+            font-size: 20px;
             color: blue;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
+        }
+        .item {
+            font-size: 16px;
+            color: red;
         }
 
         button {
             padding: 10px 20px;
-            font-size: 18px;
-            background-color: #007bff;
+            font-size: 16px;
+            background-color: green;
             color: white;
             border: none;
             cursor: pointer;
-            margin-top: 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        .item {
-            font-size: 18px;
-            margin: 10px 0;
-            transition: color 0.3s ease;
         }
     </style>
 </head>
 <body>
-
     <p id="message">Hello world, this is original text.</p>
     <button onclick="changeText()">Click me</button>
-
     <p class="item">First item</p>
     <p class="item">Second item</p>
-    <p class="item">Third item</p>
-
+    
     <script>
         function changeText() {
+            // Access HTML elements by getElementById
             let paragraph = document.getElementById('message');
-            paragraph.textContent = 'Hello world, this is updated text!';
+            paragraph.textContent = 'Hello world, this is new text.';
             paragraph.style.color = 'red';
 
-            let items = document.querySelectorAll('.item');
-            let colors = ['green', 'blue', 'purple'];
+            // getElementsByClassName -> Select elements by their class name and return a collection of elements
+            let items = document.getElementsByClassName('item');
+            items[0].style.color = 'green';
+            items[1].style.color = 'blue';
 
-            items.forEach((item, index) => {
-                item.style.color = colors[index % colors.length];
+            // getElementsByTagName -> Select elements by their tag name and return a collection of elements
+            let paragraphs = document.getElementsByTagName('p');
+            paragraphs[0].textContent = 'First item (updated)';
+
+            // querySelector -> Select the first element that matches a specified CSS selector
+            let firstItem = document.querySelector('.item');
+            firstItem.textContent = 'First item (updated again)';
+            firstItem.style.backgroundColor = 'yellow';
+
+            // querySelectorAll -> Select all elements that match a specified CSS selector
+            let items2 = document.querySelectorAll('.item');
+            items2.forEach(item => {
+                item.style.border='2px solid blue'; // Add border to each item
             });
+
         }
     </script>
-
 </body>
 </html>
