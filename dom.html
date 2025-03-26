@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Manipulation using JS</title>
+  <style>
+        #message {
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
 </head>
 <body>
     <p id="message">Hello world, this is original text.</p>
     <button onclick="changeText()">Click me</button>
+    <p class="item">first item</p>
+    <p class="item">Second item</p>
+    <script>
+        function changeText() {
+            // access html elements byn getelementId
+           let paragraph = document.getElementById('message');
+           paragraph.textContent = 'Hello world, this is new text.';
+           paragraph.style.color = 'red';
 
+           // getelementByclassName ->  select elemetns by their class name and return a collection of elements
+           let items = document.getElementsByClassName('item');
+           items[0].style.color = 'green';
+        }
+    </script>
 </body>
 </html>
