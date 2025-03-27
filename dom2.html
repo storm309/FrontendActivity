@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #heading {
+            font-size: 20px;
+            color: blue;
+        }
+        #paragraph {
+            font-size: 16px;
+            color: rgb(172, 13, 13);
+        }
+        button {
+            padding: 5px 2%;
+            font-size: 16px;
+            background-color: rgba(34, 13, 222, 0.868);
+            color: hsl(0, 4%, 86%);
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">original Heading</h1>
+    <p id="paragraph">This is a paragraph</p>
+    <button onclick="Submit()">Submit</button>
+    <button onclick="changeContent()">Change Content</button>
+    <script>
+        function changeContent(){
+            document.getElementById('heading').innerHTML = '<span style="color: red;">Updated Heading</span>'; // Change the content of the heading
+            document.getElementById('paragraph').textContent = 'This is an updated paragraph'; // Change the content of the paragraph
+            document.getElementById('changeContent').style.backgroundColor = 'green'; // Change the background color of the button
+        }   
+        function Submit(){
+            alert('Form Submitted');
+            
+        }
+
+     </script>
+</body>
+</html>
