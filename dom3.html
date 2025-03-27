@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Attributes using Dom methods</title>
+</head>
+<body>
+    <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" alt="Old Image" id="image" height="400" width="600">
+    <a href="https://www.google.com/search?q=image&oq=image+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEEUYPDIGCAQQRRg8MgYIBRAuGEDSAQgxNjM4ajBqMagCCLACAQ&sourceid=chrome&ie=UTF-8#vhid=gmPO6ub_oOcLkM&vssid=_H_vkZ7PuD5yMvr0PlvbbIA_40">Visit my example</a>
+    <button onclick="changeAttributes()">Change Attributes</button>
+    <script>
+        function changeAttributes(){
+            document.getElementById("image").setAttribute("src", "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg");
+            documment.getElementById("link").setAttribute("href", "https://www.google.com/search?q=image&oq=image+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEEUYPDIGCAQQRRg8MgYIBRAuGEDSAQgxNjM4ajBqMagCCLACAQ&sourceid=chrome&ie=UTF-8#vhid=gmPO6ub_oOcLkM&vssid=_H_vkZ7PuD5yMvr0PlvbbIA_40");
+            document.getElementById("link").textContent = "Visit my example (updated)";
+             }
+    </script>
+</body>
+</html>

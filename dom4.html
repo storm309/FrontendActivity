@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adding and Removing Elements</title>
+        <style>
+        #container{
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        #paragraph{
+            color: blue;
+        }
+
+    </style>
+    </head>
+    <body>
+        <div id="container">
+            <p id="paragraph">This is a paragraph.</p>
+
+        </div>
+        <button onclick="addElements()">Add Elements</button>
+        <button onclick="removeElements()">Remove Elements</button>
+        <script>
+            function addElements() {
+                let newParagraph = document.createElement("p");
+                newParagraph.textContent = "This is a new paragraph."; // Corrected variable name
+                document.getElementById("container").appendChild(newParagraph);
+            }
+            function removeElements() {
+                let container = document.getElementById("container");
+                let paragraphs = container.getElementsByTagName("p");
+                if (paragraphs.length > 1) {
+                    container.removeChild(paragraphs[paragraphs.length - 1]); // Removes the last paragraph
+                }
+            }
+            
+    </script>
+    </body>
+</html>
